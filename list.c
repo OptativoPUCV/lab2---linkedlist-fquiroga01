@@ -59,9 +59,25 @@ void *nextList(List *list)
   return list->current->data;
 }
 
-void *lastList(List *list) { return NULL; }
+void *lastList(List *list) 
+{ 
+  if (list == NULL || list->tail == NULL)
+  {
+    return NULL;
+  }
+  list->current = list->tail;
+  return list->current->data;
+}
 
-void *prevList(List *list) { return NULL; }
+void *prevList(List *list) 
+{ 
+  if (list == NULL || list->current == NULL || list->current->prev == NULL)
+  {
+    return NULL;
+  }
+  list->current = list->current->prev;
+  return list->current->data;
+}
 
 void pushFront(List *list, void *data) {}
 
