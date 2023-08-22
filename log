@@ -1,0 +1,14 @@
+Tue 22 Aug 2023 10:50:26 PM UTC: 
+ list.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:34:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   34 |   if (newList == NULL);
+      |   ^~
+list.c:35:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   35 |   {
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+18b144e
